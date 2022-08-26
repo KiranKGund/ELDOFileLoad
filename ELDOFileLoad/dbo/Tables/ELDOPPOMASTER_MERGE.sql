@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[ELDOPPOMASTER_MERGE] (
+    [Column 0] VARCHAR (50) NULL,
+    [Column 1] VARCHAR (50) NULL
+);
+

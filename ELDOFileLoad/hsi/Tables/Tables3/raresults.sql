@@ -1,0 +1,76 @@
+﻿CREATE TABLE [hsi].[raresults] (
+    [raresultsnum]            BIGINT          NOT NULL,
+    [racclaimnum]             BIGINT          NULL,
+    [rafinalreasonnum]        BIGINT          NULL,
+    [ralostdetcodenum]        BIGINT          NULL,
+    [totalorgchargesdisputed] NUMERIC (15, 2) NULL,
+    [amountreturned]          NUMERIC (15, 2) NULL,
+    [datereturned]            DATETIME        NULL,
+    [finalamountlostorgained] NUMERIC (15, 2) NULL,
+    [finalamountpaidstatus]   BIGINT          NULL,
+    [datefinalamountpaid]     DATETIME        NULL,
+    [intereststartdate]       DATETIME        NULL,
+    [interestenddate]         DATETIME        NULL,
+    [interestamount]          NUMERIC (15, 2) NULL,
+    [interestamtpaidstatus]   BIGINT          NULL,
+    [interestamtpaiddate]     DATETIME        NULL,
+    [interestsettlementexpl]  TEXT            NULL,
+    [lastlevelofappeal]       BIGINT          NULL,
+    [drgchanged]              BIGINT          NULL,
+    [picdchanged]             BIGINT          NULL,
+    [olddrg]                  CHAR (4)        NULL,
+    [newdrg]                  CHAR (4)        NULL,
+    [oldpicd10]               CHAR (10)       NULL,
+    [newpicd10]               CHAR (10)       NULL,
+    [newicd2]                 CHAR (10)       NULL,
+    [newicd3]                 CHAR (10)       NULL,
+    [newicd4]                 CHAR (10)       NULL,
+    [newicd5]                 CHAR (10)       NULL,
+    [newicd6]                 CHAR (10)       NULL,
+    [newicd7]                 CHAR (10)       NULL,
+    [newicd8]                 CHAR (10)       NULL,
+    [newicd9]                 CHAR (10)       NULL,
+    [oldppcicd]               CHAR (10)       NULL,
+    [oldpcicd2]               CHAR (10)       NULL,
+    [oldpcicd3]               CHAR (10)       NULL,
+    [oldpcicd4]               CHAR (10)       NULL,
+    [oldpcicd5]               CHAR (10)       NULL,
+    [oldpcicd6]               CHAR (10)       NULL,
+    [flags]                   BIGINT          NULL,
+    [dmndltrestchrg]          NUMERIC (15, 2) NULL,
+    [dmndltractchrg]          NUMERIC (15, 2) NULL,
+    [dmndltrdtsent]           DATETIME        NULL,
+    [dmndltrdtrecd]           DATETIME        NULL,
+    [rwrdltrestchrg]          NUMERIC (15, 2) NULL,
+    [rwrdltractchrg]          NUMERIC (15, 2) NULL,
+    [rwrdltrdtsent]           DATETIME        NULL,
+    [rwrdltrdtrecd]           DATETIME        NULL,
+    [oldicd2]                 CHAR (10)       NULL,
+    [oldicd3]                 CHAR (10)       NULL,
+    [oldicd4]                 CHAR (10)       NULL,
+    [oldicd5]                 CHAR (10)       NULL,
+    [oldicd6]                 CHAR (10)       NULL,
+    [oldicd7]                 CHAR (10)       NULL,
+    [oldicd8]                 CHAR (10)       NULL,
+    [oldicd9]                 CHAR (10)       NULL,
+    [newicd10]                CHAR (10)       NULL,
+    [oldicd10]                CHAR (10)       NULL,
+    [newppcicd]               CHAR (10)       NULL,
+    [newpcicd2]               CHAR (10)       NULL,
+    [newpcicd3]               CHAR (10)       NULL,
+    [newpcicd4]               CHAR (10)       NULL,
+    [newpcicd5]               CHAR (10)       NULL,
+    [newpcicd6]               CHAR (10)       NULL,
+    [seqnum]                  BIGINT          NULL
+);
+
+
+GO
+CREATE UNIQUE NONCLUSTERED INDEX [raresults1]
+    ON [hsi].[raresults]([raresultsnum] ASC);
+
+
+GO
+CREATE NONCLUSTERED INDEX [raresults2]
+    ON [hsi].[raresults]([racclaimnum] ASC);
+

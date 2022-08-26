@@ -1,0 +1,51 @@
+﻿CREATE TABLE [hsi].[statementtype] (
+    [statementnum]        BIGINT     NOT NULL,
+    [statementname]       CHAR (60)  NULL,
+    [bitmapnum]           BIGINT     NULL,
+    [matchfileflags]      BIGINT     NULL,
+    [matchfilename]       CHAR (250) NULL,
+    [outputtype]          BIGINT     NULL,
+    [processtype]         BIGINT     NULL,
+    [savefileflags]       BIGINT     NULL,
+    [diskgroupnum]        BIGINT     NULL,
+    [itemtypenum]         BIGINT     NULL,
+    [formatalias]         CHAR (8)   NULL,
+    [omrbcodex]           BIGINT     NULL,
+    [omrbcodey]           BIGINT     NULL,
+    [omrkeytypenum]       BIGINT     NULL,
+    [omrmidkeytypenum]    BIGINT     NULL,
+    [omrlastkeytypenum]   BIGINT     NULL,
+    [postnetx]            BIGINT     NULL,
+    [postnety]            BIGINT     NULL,
+    [postnetkeytypenum]   BIGINT     NULL,
+    [printautoname]       CHAR (150) NULL,
+    [printautox]          BIGINT     NULL,
+    [printautoy]          BIGINT     NULL,
+    [printautofontnum]    BIGINT     NULL,
+    [renderitgroupnum]    BIGINT     NULL,
+    [renderkeygroupnum]   BIGINT     NULL,
+    [exportmgrnum]        BIGINT     NULL,
+    [enclosureitemnum]    BIGINT     NULL,
+    [firstpageformat]     BIGINT     NULL,
+    [reconciliationnum]   BIGINT     NULL,
+    [omrfontnum]          BIGINT     NULL,
+    [postnetfontnum]      BIGINT     NULL,
+    [omrnum]              BIGINT     NULL,
+    [backsideoverlay]     BIGINT     NULL,
+    [omrrotation]         BIGINT     NULL,
+    [secbitmapnum]        BIGINT     NULL,
+    [divertcount]         BIGINT     NULL,
+    [savefileflags2]      BIGINT     NULL,
+    [printjobmaxsize]     BIGINT     NULL,
+    [cripplelimit]        BIGINT     NULL,
+    [outputpath]          CHAR (255) NULL,
+    [aggregationmethod]   BIGINT     NULL,
+    [primaryrendertype]   BIGINT     NULL,
+    [secondaryrendertype] BIGINT     NULL
+);
+
+
+GO
+CREATE UNIQUE NONCLUSTERED INDEX [statementtype1]
+    ON [hsi].[statementtype]([statementnum] ASC);
+

@@ -1,0 +1,26 @@
+﻿CREATE TABLE [hsi].[bcbatch] (
+    [batchnum]         BIGINT          NULL,
+    [batchid]          BIGINT          NULL,
+    [branchid]         BIGINT          NULL,
+    [tellerid]         BIGINT          NULL,
+    [itemcount]        BIGINT          NULL,
+    [telleritemcount]  BIGINT          NULL,
+    [onusitemcount]    BIGINT          NULL,
+    [transitcount]     BIGINT          NULL,
+    [onusamount]       NUMERIC (15, 2) NULL,
+    [transitamount]    NUMERIC (15, 2) NULL,
+    [amountbalance]    NUMERIC (15, 2) NULL,
+    [encodingstate]    BIGINT          NULL,
+    [capturedate]      DATETIME        NULL,
+    [transmitdate]     DATETIME        NULL,
+    [scanoptions]      BIGINT          NULL,
+    [parsefilename]    CHAR (100)      NULL,
+    [tellerreportpath] CHAR (255)      NULL,
+    [balancedusernum]  BIGINT          NULL,
+    [balanceddate]     DATETIME        NULL,
+    [processflags]     BIGINT          NULL,
+    [telleramount]     NUMERIC (15, 2) NULL,
+    [branchidalphanum] CHAR (10)       NULL,
+    [telleridalphanum] CHAR (10)       NULL
+);
+

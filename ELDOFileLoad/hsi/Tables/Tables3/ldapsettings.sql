@@ -1,0 +1,26 @@
+﻿CREATE TABLE [hsi].[ldapsettings] (
+    [hostname]         CHAR (255) NULL,
+    [hostport]         BIGINT     NULL,
+    [connectflags]     BIGINT     NULL,
+    [authflags]        BIGINT     NULL,
+    [connectuser]      CHAR (255) NULL,
+    [connectpassword]  CHAR (255) NULL,
+    [userclassname]    CHAR (100) NULL,
+    [usernameattr]     CHAR (100) NULL,
+    [groupclassname]   CHAR (100) NULL,
+    [groupnameattr]    CHAR (100) NULL,
+    [associationflag]  BIGINT     NULL,
+    [associationattr]  CHAR (100) NULL,
+    [basedistname]     CHAR (255) NULL,
+    [ldapsettingsnum]  BIGINT     NOT NULL,
+    [flags]            BIGINT     NULL,
+    [seqnum]           BIGINT     NULL,
+    [realnameattr]     CHAR (100) NULL,
+    [emailattr]        CHAR (100) NULL,
+    [ldapsettingsname] CHAR (255) NULL,
+    [groupsearchroot]  CHAR (255) NULL,
+    [assocvalueattr]   CHAR (255) NULL,
+    [encryptiontype]   BIGINT     NULL,
+    [initvectordata]   CHAR (255) NULL
+);
+

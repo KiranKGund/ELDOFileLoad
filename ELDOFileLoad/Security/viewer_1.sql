@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [viewer]
+    WITH PASSWORD = N'xz|jtsrhJxptpiE6ondw#yhbmsFT7_&#$!~<vqkst_|s y3A', SID = 0x30CCC93A2887F54C92A0569519431302, DEFAULT_DATABASE = [OnBase_Test], DEFAULT_LANGUAGE = [us_english], CHECK_POLICY = OFF;
+

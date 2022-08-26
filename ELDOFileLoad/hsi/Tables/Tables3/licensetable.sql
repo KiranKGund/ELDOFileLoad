@@ -1,0 +1,27 @@
+﻿CREATE TABLE [hsi].[licensetable] (
+    [installid]      CHAR (50)  NOT NULL,
+    [address]        CHAR (200) NULL,
+    [city]           CHAR (200) NULL,
+    [companyname]    CHAR (200) NULL,
+    [country]        CHAR (200) NULL,
+    [customername]   CHAR (200) NULL,
+    [customernumber] CHAR (100) NULL,
+    [dbpatchctrl]    BIGINT     NULL,
+    [dbusespaces]    BIGINT     NULL,
+    [dbversion]      CHAR (8)   NULL,
+    [dealername]     CHAR (200) NULL,
+    [dealernum]      CHAR (100) NULL,
+    [exepatchctrl]   BIGINT     NULL,
+    [installdate]    DATETIME   NULL,
+    [licenseflag]    BIGINT     NULL,
+    [maxpasswordlen] BIGINT     NULL,
+    [maxrefresh]     BIGINT     NULL,
+    [minpasswordlen] BIGINT     NULL,
+    [minrefresh]     BIGINT     NULL,
+    [serialnum]      CHAR (25)  NULL,
+    [state]          CHAR (100) NULL,
+    [zip]            CHAR (50)  NULL,
+    [initvectordata] CHAR (255) NULL,
+    [cryptotype]     BIGINT     NULL
+);
+

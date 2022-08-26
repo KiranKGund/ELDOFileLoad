@@ -1,0 +1,75 @@
+﻿CREATE TABLE [dbo].[ELDODEPENDENT] (
+    [POLICY_UNDERWRITER_NUMBER]     VARCHAR (3)  NOT NULL,
+    [GROUP_NUMBER]                  VARCHAR (3)  NOT NULL,
+    [EMPLOYEE_SSN]                  VARCHAR (9)  NOT NULL,
+    [DEPENDENT_SEQUENCE_NUMBER]     DECIMAL (2)  NOT NULL,
+    [DATE_LAST_CHANGED]             DATE         NULL,
+    [CHANGE_BY]                     VARCHAR (6)  NULL,
+    [DEPENDENT_LAST_NAME]           VARCHAR (15) NULL,
+    [DEPENDENT_FIRST_NAME]          VARCHAR (15) NULL,
+    [DEPENDENT_MIDDLE_INITIAL]      VARCHAR (1)  NULL,
+    [DEPENDENT_NAME_SUFFIX]         VARCHAR (6)  NULL,
+    [DEPENDENT_NAME]                VARCHAR (30) NULL,
+    [ADDRESS_LINE_1]                VARCHAR (30) NULL,
+    [ADDRESS_LINE_2]                VARCHAR (30) NULL,
+    [CITY]                          VARCHAR (15) NULL,
+    [STATE]                         VARCHAR (2)  NULL,
+    [ZIP]                           VARCHAR (9)  NULL,
+    [HOME_PHONE]                    VARCHAR (10) NULL,
+    [OTHER_PHONE]                   VARCHAR (10) NULL,
+    [DATE_OF_BIRTH]                 DATE         NULL,
+    [SEX]                           VARCHAR (1)  NULL,
+    [RELATIONSHIP_TO_EMPLOYEE]      VARCHAR (1)  NULL,
+    [DEPENDENT_SSN]                 VARCHAR (9)  NULL,
+    [NAME_OF_SCHOOL]                VARCHAR (40) NULL,
+    [SEMESTER_HOURS]                VARCHAR (3)  NULL,
+    [DATE_DEPENDENT_FIRST_ENROLLED] DATE         NULL,
+    [SPECIAL_CODES]                 VARCHAR (10) NULL,
+    [USER_DEFINED_ALTERNATE_ID]     VARCHAR (3)  NULL,
+    [USER_COMMENT_LINE_1]           VARCHAR (40) NULL,
+    [USER_COMMENT_LINE_2]           VARCHAR (40) NULL,
+    [PCS_CARD_SELECT]               VARCHAR (1)  NULL,
+    [PCS_CARD_REASON]               VARCHAR (2)  NULL,
+    [PCS_CARD_COMPLETE_DATE]        DATE         NULL,
+    [TAKEN_OVER]                    VARCHAR (1)  NULL,
+    [MEDICALLY_UNDERWRITTEN]        VARCHAR (1)  NULL,
+    [PAY_CHECK_TO_EMPLOYEE]         VARCHAR (1)  NULL,
+    [MCS_ID]                        VARCHAR (2)  NULL,
+    [MCS_NBR]                       VARCHAR (8)  NULL,
+    [EXPEDITE_CLAIM]                VARCHAR (1)  NULL,
+    [MEDICARE_INDICATOR]            VARCHAR (1)  NULL,
+    [HCRA_COUNTY]                   VARCHAR (20) NULL,
+    [HCRA_EFFECTIVE_DATE]           DATE         NULL,
+    [LAST_UPDATE_DATE]              DATE         NULL,
+    [LAST_UPDATE_USER]              VARCHAR (20) NULL,
+    [LOAD_DATE]                     DATE         CONSTRAINT [ELDODEPENDENT_LOAD_DATE] DEFAULT (getdate()) NULL,
+    [LAST_UPDATE_TIME]              DATETIME     CONSTRAINT [ELDODEPENDENT_LAST_UPDATE_TIME] DEFAULT (getdate()) NULL,
+    [DEP_HANDICAP]                  CHAR (1)     NULL,
+    [DEP_FILLER]                    VARCHAR (78) NULL,
+    [DEP_CERT_NUMBER]               VARCHAR (12) NULL,
+    [EMP_EOB]                       VARCHAR (1)  NULL,
+    [DEP_ALTID1]                    VARCHAR (20) NULL,
+    [DEP_ALTID2]                    VARCHAR (20) NULL,
+    CONSTRAINT [PKELDODEPENDENT] PRIMARY KEY CLUSTERED ([POLICY_UNDERWRITER_NUMBER] ASC, [GROUP_NUMBER] ASC, [EMPLOYEE_SSN] ASC, [DEPENDENT_SEQUENCE_NUMBER] ASC)
+);
+
+
+GO
+CREATE NONCLUSTERED INDEX [ELDODEP_LNAME]
+    ON [dbo].[ELDODEPENDENT]([DEPENDENT_LAST_NAME] ASC);
+
+
+GO
+CREATE NONCLUSTERED INDEX [ELDODEPBDATE]
+    ON [dbo].[ELDODEPENDENT]([DATE_OF_BIRTH] ASC);
+
+
+GO
+CREATE NONCLUSTERED INDEX [ELDODEPNAME]
+    ON [dbo].[ELDODEPENDENT]([DEPENDENT_FIRST_NAME] ASC);
+
+
+GO
+CREATE NONCLUSTERED INDEX [ELDODEPSSN]
+    ON [dbo].[ELDODEPENDENT]([EMPLOYEE_SSN] ASC);
+
